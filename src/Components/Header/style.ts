@@ -6,4 +6,6 @@ export const Header = styled.header`
   height: 100px;
   font-weight: 500;
   text-align: center;
+  position: fixed;
+  z-index: 100;
 `;
