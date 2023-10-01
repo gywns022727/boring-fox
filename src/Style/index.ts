@@ -10,10 +10,17 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     color: inherit;
   }
+  
+  body {
+    font-family: "IBM Plex Sans KR", sans-serif;
+    background-color: #FDFDFD;
+  }
 
   img {
     vertical-align: middle;
   }
+
+
 `;
 
 export default GlobalStyle;
