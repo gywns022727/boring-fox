@@ -24,11 +24,11 @@ export const Scroll = styled.div`
   perspective: 1000px;
 `;
 
-export const ContentBox = styled.div`
+export const ContentBox = styled.div<{ transform: number | string }>`
   width: 100%;
   height: 100%;
   position: absolute;
-  transform: translateZ(-288px);
+  transform: translateZ(-288px) rotateY(${(props) => props.transform}deg);
   transform-style: preserve-3d;
   transition: transform 1s;
   :nth-child(1) {
