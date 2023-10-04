@@ -18,7 +18,7 @@ export default function Router() {
           <AnimatePresence>
             <BrowserRouter>
               <Routes>
-                <Route path="/" element={<Main />} />
+                <Route path="/*" element={<Main />} />
                 <Route path="/ark" element={<Ark />} />
               </Routes>
             </BrowserRouter>

@@ -14,6 +14,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-family: "IBM Plex Sans KR", sans-serif;
     background-color: #FDFDFD;
+    user-select: none;
   }
 
   img {
