@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import BeatLoader from "react-spinners/BeatLoader";
 import { LoadingContext } from "../../Components/Context/ContextApi";
 import Header from "../../Components/Layout/Header";
-import Sign from "../../Components/Sign";
+import Sign from "../../Components/Layout/Slide";
 
 export default function Index() {
   const { isLoading, setIsLoading } = useContext(LoadingContext);
