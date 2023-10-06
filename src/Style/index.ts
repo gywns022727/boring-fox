@@ -20,8 +20,6 @@ const GlobalStyle = createGlobalStyle`
   img {
     vertical-align: middle;
   }
-
-
 `;
 
 export default GlobalStyle;

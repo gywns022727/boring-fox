@@ -12,7 +12,19 @@ export default function Index() {
         effect={"cards"}
         grabCursor={true}
         history={{
-          key: "slide",
+          key: "",
+        }}
+        onTouchEnd={() => {
+          setTimeout(()=>{
+            const slideNumber: string = window.location.pathname.substring(1, 3);
+            console.log(Number(slideNumber))
+            // switch(slideNumber) {
+            //   case "1":
+            //     break;
+            //   case "10":
+            //     break;
+            // }
+          }, 500)
         }}
         modules={[EffectCards, History]}
       >

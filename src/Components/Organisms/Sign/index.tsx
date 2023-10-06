@@ -2,10 +2,10 @@ import React from 'react'
 import {Container} from './style'
 import { useNavigate } from "react-router-dom";
 
-interface propsType {
+interface propsType  {
   mainTitle: string,
   navigate: string,
-  pageNo: string
+  pageNo: string,
 }
 
 export default function Index(props:propsType) {

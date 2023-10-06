@@ -5,7 +5,7 @@ import { LoadingContext, CountContext } from "../Components/Context/ContextApi";
 import { AnimatePresence } from "framer-motion";
 import Main from "../Page/Main";
 import Ark from "../Page/Ark";
-import NotFound from '../Page/404'
+import NotFound from "../Page/404";
 
 export default function Router() {
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -20,9 +20,8 @@ export default function Router() {
             <BrowserRouter>
               <Routes>
                 <Route path="/" element={<Main />} />
-                <Route path="/slide/*" element={<Main />} />
+                <Route path="/:pageNumber" element={<Main />} />
                 <Route path="/ark" element={<Ark />} />
-                <Route path="/*" element={<NotFound />} />
               </Routes>
             </BrowserRouter>
           </AnimatePresence>

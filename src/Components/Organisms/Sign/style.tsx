@@ -9,12 +9,19 @@ export const Container = styled.div`
     justify-content: space-between;
     position: relative;
     >h1 {
-        font-weight: 800;
-        font-size: 50px;
+          font-weight: 800;
+          font-size: 50px;
+          @media (max-width: 280px) {
+            font-weight: 600;
+            font-size: 45px;
+          }
     }
     >h2{
         text-align: right;
         font-size: 100px;
+        @media (max-width: 280px) {
+            font-size: 95px;
+        }
     }
     >p{
         font-size: 14px;
@@ -22,5 +29,8 @@ export const Container = styled.div`
         left: -15%;
         bottom: 22%;
         transform: rotate(-90deg);
+        @media (max-width: 280px) {
+            font-size: 12px;
+        }
     }
 `

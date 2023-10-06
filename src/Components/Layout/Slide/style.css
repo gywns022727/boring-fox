@@ -1,6 +1,10 @@
 .swiper {
   width: 230px;
   height: 320px;
+  @media (max-width: 280px) {
+    width: 200px;
+    height: 280px;
+  }
 }
 
 .swiper-slide {

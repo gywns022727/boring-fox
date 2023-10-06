@@ -5,15 +5,15 @@ interface LoadingType {
   setIsLoading: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-interface CountType {
-  isCount: number;
-  setIsCount: React.Dispatch<React.SetStateAction<number>>;
-}
-
 export const LoadingContext = createContext<LoadingType>({
   isLoading: false,
   setIsLoading: () => {},
 });
+
+interface CountType {
+  isCount: number;
+  setIsCount: React.Dispatch<React.SetStateAction<number>>;
+}
 
 export const CountContext = createContext<CountType>({
   isCount: 1,
