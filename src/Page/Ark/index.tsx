@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Canvas } from "./style";
 import { motion } from "framer-motion";
 import Header from "../../Components/Layout/Header";
@@ -10,31 +10,36 @@ export default function Index() {
   const canvasSize: number =
     window.innerWidth >= 550 ? 500 : window.innerWidth / 1.2;
 
-  let yPosition: number = 0;
-  let direction: number = 1;
-  const speed: number = 6;
-
-  const Wave = () => {
+  useEffect(() => {
     const canvas: HTMLCanvasElement | null = canvasRef.current;
     if (!canvas) return;
     const context: CanvasRenderingContext2D | null = canvas.getContext("2d");
     if (!context) return;
 
-    context.clearRect(0, 0, canvas.width, canvas.height);
-    context.fillStyle = "blue";
-    context.fillRect(0, yPosition, 50, 50);
+    interface PointProps {
+      // index: number;
+      x: number;
+      y: number;
+    }
 
-    yPosition += speed * direction;
+    const Point = ({ x, y }: PointProps) => {
+      const max: number = Math.random() * 100 + 150;
+      const pointY = y + Math.sin(0.1) * max;
 
-    if (yPosition / 2 <= 0 || yPosition + 50 >= canvasSize) direction *= -1;
+      context.beginPath();
+      context.arc(x, pointY, 30, 0, 2 * Math.PI);
+      console.log(pointY);
+      context.fillStyle = "pink";
+      context.fill();
+      context.closePath();
+    };
 
-    // requestAnimationFrame(Wave);
-  };
-  const max: number = Math.random() * 100 + 150;
-  console.log(max);
-
-  useEffect(() => {
+    const Wave = () => {
+      Point({ x: canvasSize / 2, y: canvasSize / 2 });
+      // requestAnimationFrame(Wave);
+    };
     Wave();
+    const WaveGroup = () => {};
   });
 
   return (
